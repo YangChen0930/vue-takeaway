@@ -130,6 +130,8 @@ export default {
 
 <style lang="stylus">
 @import '../../common/stylus/mixin.styl'
+
+
 .ratings
     position absolute
     top 174px

@@ -1,3 +1,12 @@
+
+/**
+ *
+ *
+ * @export 
+ * @param {*} date 时间戳
+ * @param {*} fmt  输出的时间格式
+ * @returns String '2018-8-9 16:56'
+ */
 export function formatDate(date, fmt) {
   if (/(y+)/.test(fmt)) {
     fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
