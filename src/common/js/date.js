@@ -1,8 +1,7 @@
-
 /**
  *
  *
- * @export 
+ * @export
  * @param {*} date 时间戳
  * @param {*} fmt  输出的时间格式
  * @returns String '2018-8-9 16:56'

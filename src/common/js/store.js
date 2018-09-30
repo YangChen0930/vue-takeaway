@@ -21,7 +21,6 @@ export function saveToLocal(id, key, value) {
   window.localStorage.__seller__ = JSON.stringify(seller);
 }
 
-
 /**
  *
  *读取缓存
