@@ -19,7 +19,6 @@ const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
 let baseUrl = (process.env.NODE_ENV === 'production' ? 'http://hcyangchen.xyz/sell/' : '/')
-console.log(baseUrl)
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {

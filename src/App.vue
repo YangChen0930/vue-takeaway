@@ -38,7 +38,7 @@ export default {
     }
   },
   created () {
-    this.$http.get(baseUrl + 'api/seller?id=' + this.seller.id).then(res => {
+    this.$http.get(baseUrl + 'api/seller?id=1').then(res => {
       res = res.body
       if (res.errno === ERR_OK) {
         this.seller = Object.assign({}, this.seller, res.data)
