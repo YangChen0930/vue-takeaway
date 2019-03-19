@@ -18,8 +18,6 @@ const ratings = appData.ratings
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
 
-let baseUrl = (process.env.NODE_ENV === 'production' ? 'http://hcyangchen.xyz/sell/' : '/')
-
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -33,7 +31,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // these devServer options should be customized in /config/index.js
   devServer: {
     before(app) {
-      app.get(baseUrl + 'api/seller', function (req, res) {
+      app.get('/api/seller', function (req, res) {
           // 服务端收到请求后返回给客户端一个json数据
           res.json({
             // 当我们数据正常时，我们通过传递errno字符为0表示数据正常
@@ -42,13 +40,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             data: seller
           })
         }),
-        app.get(baseUrl + 'api/goods', function (req, res) {
+        app.get('/api/goods', function (req, res) {
           res.json({
             errno: 0,
             data: goods
           })
         }),
-        app.get(baseUrl + 'api/ratings', function (req, res) {
+        app.get('/api/ratings', function (req, res) {
           res.json({
             errno: 0,
             data: ratings

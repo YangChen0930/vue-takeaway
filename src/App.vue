@@ -22,8 +22,6 @@
 import { urlParse } from 'common/js/util'
 import header from 'components/header/header'
 
-let baseUrl = process.env.NODE_ENV === 'production' ? 'http://hcyangchen.xyz/sell/' : '/'
-
 const ERR_OK = 0
 
 export default {
@@ -38,7 +36,7 @@ export default {
     }
   },
   created () {
-    this.$http.get(baseUrl + 'api/seller?id=1').then(res => {
+    this.$http.get('/api/seller?id=' + this.seller.id).then(res => {
       res = res.body
       if (res.errno === ERR_OK) {
         this.seller = Object.assign({}, this.seller, res.data)

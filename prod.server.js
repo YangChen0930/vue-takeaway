@@ -3,8 +3,6 @@ var config = require("./config/index");
 
 var port = process.env.PORT || config.build.port;
 
-let baseUrl = (process.env.NODE_ENV === 'production' ? 'http://hcyangchen.xyz/sell/' : '/')
-
 var app = express();
 
 var router = express.Router();
@@ -44,7 +42,7 @@ apiRoutes.get("/ratings", function (req, res) {
   });
 });
 
-app.use(baseUrl + "api", apiRoutes);
+app.use("/api", apiRoutes);
 
 app.use(express.static("./dist"));
 
