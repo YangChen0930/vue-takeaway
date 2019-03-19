@@ -1,10 +1,12 @@
 import axios from 'axios'
 
+let baseUrl = (process.env.NODE_ENV === 'production' ? 'http://hcyangchen.xyz/sell/' : '/')
+
 const ERR_OK = 0
 
 export function get(url) {
   return function (params) {
-    return axios.get(url, {
+    return axios.get(baseUrl + url, {
       params
     }).then((res) => {
       const {
