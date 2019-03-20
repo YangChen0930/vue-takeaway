@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let baseUrl = (process.env.NODE_ENV === 'production' ? 'http://hcyangchen.xyz/sell/' : '/')
+let baseUrl = (process.env.NODE_ENV === 'production' ? 'http://www.hcyangchen.xyz/sell/' : '/')
 
 const ERR_OK = 0
 
